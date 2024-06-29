@@ -1,0 +1,19 @@
+@import './colors.scss';
+@import './police.scss';
+
+@mixin textFormatRed(){
+    font-family: $mainPolice;
+    color: $red;
+}
+
+@mixin backgroundImg($url, $darkenValue){
+    background: linear-gradient(
+        rgba(0, 0, 0, $darkenValue),
+        rgba(0, 0, 0, $darkenValue)
+        ),
+        url($url);
+    background-position-y: 50%;
+    border-radius: 25px;
+    height: 220px;
+    margin: 20px 0;
+}

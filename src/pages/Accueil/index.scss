@@ -1,0 +1,36 @@
+@import "../../utils/colors.scss";
+@import "../../utils/police.scss";
+@import "../../utils/mixins.scss";
+
+
+main{
+    width: 1240px;
+    margin: 20px auto;
+
+    .title__background{
+        @include backgroundImg("../../assets/background-accueil.png", 0.6);
+        display: flex;
+        align-items: center;
+    }
+    
+    h1{
+        color: white;
+        margin: auto;
+        font-size: 48px;
+        font-family: $mainPolice;
+    }
+
+    .logements{
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        justify-content: space-around;
+        background-color: $background-color-lightgrey;
+        border-radius: 25px;
+        padding: 30px;
+    }
+
+    a{
+        margin-bottom: 30px;
+    }
+}
+

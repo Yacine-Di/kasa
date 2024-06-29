@@ -1,0 +1,81 @@
+@import '../../utils/colors.scss';
+@import '../../utils/police.scss';
+@import '../../utils/mixins.scss';
+
+.logement{
+    width: 1240px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin:  50px auto;
+
+    .presentation{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+
+    .title__location__tags{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .title{
+        @include textFormatRed();
+        font-size: 36px;
+        margin: 0px;
+    }
+
+    .location{
+        font-family: $mainPolice;
+        font-size: 18px;
+        margin: 10px 0;
+    }
+
+    .tags{
+        display: flex;
+        padding: 0;
+    }
+
+    .tag{
+        background-color: $red;
+        font-size: 14px;
+        list-style: none;
+        margin: 0 10px 0 0;
+        border-radius: 10px;
+        font-family: $mainPolice;
+        font-weight: 700;
+        padding: 5px 30px;
+        color: white;
+
+    }
+
+    .hote-infos{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .hote-name{
+        @include textFormatRed();
+        font-size: 18px;
+        margin-right: 10px;
+        width: 80px;
+        text-align: end;
+    }
+
+    .hote-picture{
+        height: 64px;
+        width: 64px;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    .description__equipements{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+}

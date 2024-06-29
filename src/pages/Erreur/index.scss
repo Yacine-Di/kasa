@@ -1,0 +1,28 @@
+@import "../../utils/police.scss";
+@import '../../utils/mixins.scss';
+
+
+.erreur, .erreur__msg, .redirect {
+    text-align: center;
+    margin-bottom: 70px;
+    margin-top: 70px;
+}
+
+.erreur{
+    font-size: 288px;
+    @include textFormatRed();
+}
+
+.erreur__msg{
+    font-size: 36px;
+    @include textFormatRed();
+}
+
+.redirect{
+
+    a{
+        color: black;
+        font-size: 18px;
+        font-family: $mainPolice;
+    }
+}
