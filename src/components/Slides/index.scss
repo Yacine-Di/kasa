@@ -4,6 +4,10 @@
     height: 415px;
     display: flex;
 
+    @media (max-width: 768px) {
+        height: 255px;
+    }
+
     &__arrow{
         height: 80px;
         width: 45px;
@@ -13,6 +17,11 @@
         margin-top: auto;
         margin-bottom: auto;
         cursor: pointer;
+
+        @media (max-width: 768px) {
+            height: 20px;
+            width: 12px;
+        }
 
         &--left{
             right: 95%;

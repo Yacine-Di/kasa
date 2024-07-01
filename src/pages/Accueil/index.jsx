@@ -5,15 +5,16 @@ import './index.scss'
 
 function Accueil() {
     return (
-        <main>
+        <main className="accueil">
             <section className="title__background">
-                <h1>Chez vous, partout et ailleurs</h1>
+                <h1 className="main__title">Chez vous, partout et ailleurs</h1>
             </section>
             <section className="logements">
                 {logements.map((logement) => (
                     <Link
                         key={`logement-${logement.id}`}
                         to={`/logement/${logement.id}`}
+                        className="logement__link"
                     >
                         <LogementCard
                             key={logement.id}

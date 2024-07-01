@@ -7,9 +7,19 @@ function StarRate({ rating }) {
     for (let i = 1; i <= 5; i++) {
         rate.push(
             parseInt(rating) >= i ? (
-                <img key={`rate-${i}`} src={fullstar} alt="fullstar" />
+                <img
+                    className="star"
+                    key={`rate-${i}`}
+                    src={fullstar}
+                    alt="fullstar"
+                />
             ) : (
-                <img key={`rate-${i}`} src={emptystar} alt="emptystar" />
+                <img
+                    className="star"
+                    key={`rate-${i}`}
+                    src={emptystar}
+                    alt="emptystar"
+                />
             )
         )
     }

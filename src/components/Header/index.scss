@@ -1,16 +1,24 @@
 @import "../../utils/police.scss";
 
 header{
-    margin: 20px auto;
-    width: 1240px;
+    margin: 30px auto;
+    max-width: 1240px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    min-height: 10vh;
+
+    @media (max-width: 768px) {
+        width: 90%;
+    }
 
     img{
         height: 68px;
         width: 210px;
+
+        @media (max-width: 768px) {
+        height: 46px;
+        width: 145px;
+        }
     }
 
     nav{
@@ -23,6 +31,14 @@ header{
             font-size: 24px;
             text-decoration: none;
             color: #000000;
+
+            @media (max-width: 768px) {
+                font-size: 12px;
+            }
+        }
+
+        .link:active{
+            text-decoration: underline;
         }
     }
 }

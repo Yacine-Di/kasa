@@ -2,7 +2,7 @@ import { useState } from 'react'
 import topArrow from '../../assets/arrow-top.png'
 import './index.scss'
 
-function Infos({ title, text, size }) {
+function Infos({ title, text }) {
     const [isTextInfoOpen, setDescription] = useState(false)
     const [isEquipementOpen, setEquipement] = useState(false)
     let infosClasses = 'infos infos__background--lightgrey'
@@ -12,11 +12,11 @@ function Infos({ title, text, size }) {
 
     if (isTextInfoOpen || isEquipementOpen) {
         rotateArrow += 'infos__arrow--rotate__bot'
-        contentClasses += 'infos-description--show'
+        contentClasses += 'infos-more--show'
     }
 
     return title === 'equipements' ? (
-        <article className={infosClasses} style={{ width: size }}>
+        <article className={infosClasses}>
             <p
                 className="infos-title"
                 onClick={() => setEquipement(!isEquipementOpen)}
@@ -39,7 +39,7 @@ function Infos({ title, text, size }) {
             </div>
         </article>
     ) : (
-        <article className={infosClasses} style={{ width: size }}>
+        <article className={infosClasses}>
             <p
                 className="infos-title"
                 onClick={() => setDescription(!isTextInfoOpen)}

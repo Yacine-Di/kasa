@@ -3,17 +3,25 @@
 @import '../../utils/mixins.scss';
 
 .logement{
-    width: 1240px;
+    max-width: 1240px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     margin:  50px auto;
+
+    @media (max-width: 768px) {
+        width: 90%;
+    }
 
     .presentation{
         width: 100%;
         display: flex;
         justify-content: space-between;
         margin-top: 20px;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+        }
     }
 
     .title__location__tags{
@@ -25,18 +33,31 @@
     .title{
         @include textFormatRed();
         font-size: 36px;
+        font-weight: 500;
         margin: 0px;
+
+        @media (max-width: 768px) {
+            font-size: 18px;
+        }
     }
 
     .location{
         font-family: $mainPolice;
         font-size: 18px;
         margin: 10px 0;
+
+        @media (max-width: 768px) {
+            font-size: 14px;
+        }
     }
 
     .tags{
         display: flex;
         padding: 0;
+
+        @media (max-width: 768px) {
+            margin-top: 5px;
+        }
     }
 
     .tag{
@@ -50,6 +71,26 @@
         padding: 5px 30px;
         color: white;
 
+        @media (max-width: 768px) {
+            font-size: 10px;
+        }
+    }
+
+    .host__rate{
+        @media (max-width: 768px) {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px
+        }
+    }
+
+    .star{
+        @media (max-width: 768px) {
+            height: 18px;
+            width: 18px;
+        }
     }
 
     .hote-infos{
@@ -64,6 +105,10 @@
         margin-right: 10px;
         width: 80px;
         text-align: end;
+
+        @media (max-width: 768px) {
+            font-size: 12px;
+        }
     }
 
     .hote-picture{
@@ -71,11 +116,21 @@
         width: 64px;
         object-fit: cover;
         border-radius: 50%;
+
+        @media (max-width: 768px) {
+            height: 32px;
+            width: 32px;
+        }
     }
 
     .description__equipements{
         display: flex;
         width: 100%;
         justify-content: space-between;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            align-items: center;
+        }
     }
 }
