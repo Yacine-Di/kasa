@@ -4,6 +4,7 @@ import './index.scss'
 import Slides from '../../components/Slides'
 import StarRate from '../../components/StarRate'
 import Infos from '../../components/Infos'
+import { sizes } from '../../datas/infosSizes'
 
 function Logement() {
     const { id } = useParams()
@@ -46,8 +47,16 @@ function Logement() {
                 </article>
             </article>
             <article className="description__equipements">
-                <Infos categorie="description" text={description} />
-                <Infos categorie="equipements" text={equipments} />
+                <Infos
+                    title="Description"
+                    text={description}
+                    size={sizes.medium}
+                />
+                <Infos
+                    title="equipements"
+                    text={equipments}
+                    size={sizes.medium}
+                />
             </article>
         </main>
     )

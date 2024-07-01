@@ -3,12 +3,11 @@
 
 .infos{
     border-radius: 10px;
-    width: 580px;
     height: fit-content;
+    margin-bottom: 30px;
 
     &-title{
         background-color: $red;
-        border-radius: 5px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -17,32 +16,47 @@
         font-family: $mainPolice;
         font-weight: 700;
         margin: 0;
+        z-index: 1;
+        border-radius: 5px;
     }
 
-    &-description{
-        margin: 0;
+    &-more-container {
+        overflow: hidden;
+        transform :translateY(-2px);
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+
+    &-more-content{
+        margin-top: -220px;
+        margin-bottom: 0px;
         padding: 10px;
         font-size: 18px;
         font-family: $mainPolice;
+        transition: all 0.25s linear;
+        -moz-transition: all 0.25s linear;
+        -webkit-transition: all 0.25s linear;
     }
 
-    &__arrow-rotate__bot{
-        rotate: (180deg);
+    &-description--show{
+        margin-top: 0px;
+        background-color: $background-color-lightgrey;
     }
 
-    &-equipements{
-        padding: 10px 20px;
-        margin: 0px;
-        border-bottom-right-radius: 10px;
-        border-bottom-left-radius: 10px;
+    &__arrow{
+        transition: all 0.25s linear;
+        -moz-transition: all 0.25s linear;
+        -webkit-transition: all 0.25s linear;
+    }
+
+    &__arrow--rotate__bot{
+        transform: rotate(-180deg);
+        -moz-transform: rotate(-180deg);
+        -webkit-transform: rotate(-180deg);
     }
 
     &-equipement{
         list-style: none;
         font-size: 18px;
-    }
-
-    &__background--lightgrey{
-        background-color: $background-color-lightgrey;
     }
 }

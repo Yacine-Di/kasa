@@ -6,6 +6,7 @@ header{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    min-height: 10vh;
 
     img{
         height: 68px;
@@ -23,6 +24,5 @@ header{
             text-decoration: none;
             color: #000000;
         }
-
     }
 }

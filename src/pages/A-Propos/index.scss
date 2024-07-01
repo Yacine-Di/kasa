@@ -1,8 +1,11 @@
 @import "../../utils/mixins.scss";
 
 .a-propos{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    
     &__infos{
-        height: 380px;
         display: flex;
         justify-content: space-around;
         flex-direction: column;
@@ -10,7 +13,7 @@
     }
 
     .background{
+        width: 100%;
         @include backgroundImg("../../assets/background-apropos.png", 0.3);
     }
-   
 }

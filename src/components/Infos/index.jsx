@@ -2,64 +2,58 @@ import { useState } from 'react'
 import topArrow from '../../assets/arrow-top.png'
 import './index.scss'
 
-function Infos({ categorie, text }) {
+function Infos({ title, text, size }) {
     const [isTextInfoOpen, setDescription] = useState(false)
     const [isEquipementOpen, setEquipement] = useState(false)
-    let infosClass = 'infos '
-    let rotateArrow = ''
-    const titleInfo =
-        categorie.toString().charAt(0).toUpperCase() +
-        categorie.toString().slice(1)
-
-    function handleDescriptionClick(test) {
-        setDescription(!test)
-    }
-
-    function handleEquipementsClick() {
-        setEquipement(!isEquipementOpen)
-    }
+    let infosClasses = 'infos infos__background--lightgrey'
+    let rotateArrow = 'infos__arrow '
+    let moreInfoClasses = 'infos-more-container '
+    let contentClasses = 'infos-more-content '
 
     if (isTextInfoOpen || isEquipementOpen) {
-        infosClass += 'infos__background--lightgrey'
-        rotateArrow = 'infos__arrow-rotate__bot'
+        rotateArrow += 'infos__arrow--rotate__bot'
+        contentClasses += 'infos-description--show'
     }
 
-    return categorie === 'equipements' ? (
-        <article className={infosClass}>
-            <p className="infos-title" onClick={handleEquipementsClick}>
+    return title === 'equipements' ? (
+        <article className={infosClasses} style={{ width: size }}>
+            <p
+                className="infos-title"
+                onClick={() => setEquipement(!isEquipementOpen)}
+            >
                 Équipements
-                <span>
-                    <img
-                        className={rotateArrow}
-                        src={topArrow}
-                        alt="flèche indiquant si la description est ouverte ou fermée"
-                    />
-                </span>
+                <img
+                    className={rotateArrow}
+                    src={topArrow}
+                    alt="flèche indiquant si le texte est ouverte ou fermée"
+                />
             </p>
-            {isEquipementOpen && (
-                <ul className="infos-equipements">
+            <div className={moreInfoClasses}>
+                <ul className={contentClasses}>
                     {text.map((equipement) => (
                         <li className="infos-equipement" key={equipement}>
                             {equipement}
                         </li>
                     ))}
                 </ul>
-            )}
+            </div>
         </article>
     ) : (
-        <article className={infosClass}>
+        <article className={infosClasses} style={{ width: size }}>
             <p
                 className="infos-title"
-                onClick={() => handleDescriptionClick(isTextInfoOpen)}
+                onClick={() => setDescription(!isTextInfoOpen)}
             >
-                {titleInfo}
+                {title}
                 <img
                     className={rotateArrow}
                     src={topArrow}
                     alt="flèche indiquant si le détails est ouverte ou fermée"
                 />
             </p>
-            {isTextInfoOpen && <p className="infos-description">{text}</p>}
+            <div className={moreInfoClasses}>
+                <p className={contentClasses}>{text}</p>
+            </div>
         </article>
     )
 }
