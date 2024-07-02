@@ -3,13 +3,15 @@ import './index.scss'
 
 function Erreur() {
     return (
-        <main>
-            <p className="erreur">404</p>
+        <main className="erreur">
+            <p className="erreur__number">404</p>
             <p className="erreur__msg">
                 Oups! La page que vous demandez n'existe pas.
             </p>
             <p className="redirect">
-                <Link to="/">Retourner sur la page d’accueil</Link>
+                <Link className="redirect__link" to="/">
+                    Retourner sur la page d’accueil
+                </Link>
             </p>
         </main>
     )

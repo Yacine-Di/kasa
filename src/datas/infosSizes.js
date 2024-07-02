@@ -1,5 +1,5 @@
 const sizes = {
-    small: '90%',
+    small: '100%',
     medium: '45%',
     large: '85%',
 }

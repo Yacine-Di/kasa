@@ -4,10 +4,11 @@
 
 
 .accueil{
-    width: 1240px;
+    max-width: 1240px;
+    width: 100%;
     margin: 20px auto;
     
-    @media (max-width: 768px) {
+    @media (max-width: 1024px) {
         width: 90%;
     }
 
@@ -36,7 +37,7 @@
 
     .logements{
         display: grid;
-        grid-template-columns: repeat(3, auto);
+        grid-template-columns: repeat(auto-fill, 340px);
         justify-content: space-around;
         background-color: $background-color-lightgrey;
         border-radius: 25px;
@@ -46,7 +47,6 @@
             grid-template-columns: repeat(1, auto);
             background-color: white;
             padding: 0;
-
         }
     }
 

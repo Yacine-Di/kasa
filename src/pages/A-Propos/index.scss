@@ -1,10 +1,21 @@
 @import "../../utils/mixins.scss";
+@import "../../utils/infosSizes.scss";
 
 .a-propos{
     display: flex;
+    align-items: center;
     flex-direction: column;
     margin: 0 auto;
+    max-width: 1440px;
     
+    @media (max-width: 768px) {
+        width: 90%;
+    }
+
+    @media (max-width: 1024px) {
+        width: 90%;
+    }
+
     &__infos{
         display: flex;
         justify-content: space-around;
@@ -14,6 +25,7 @@
 
     .background{
         width: 100%;
+        max-width: 1240px;
         @include backgroundImg("../../assets/background-apropos.png", 0.3);
     }
 }

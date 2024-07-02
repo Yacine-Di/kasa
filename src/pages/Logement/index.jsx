@@ -3,7 +3,7 @@ import logements from '../../datas/logements.json'
 import './index.scss'
 import Slides from '../../components/Slides'
 import StarRate from '../../components/StarRate'
-import Infos from '../../components/Infos'
+import InfosLogement from '../../components/InfosLogement'
 
 function Logement() {
     const { id } = useParams()
@@ -46,8 +46,8 @@ function Logement() {
                 </article>
             </article>
             <article className="description__equipements">
-                <Infos title="Description" text={description} />
-                <Infos title="equipements" text={equipments} />
+                <InfosLogement title="Description" text={description} />
+                <InfosLogement title="equipements" text={equipments} />
             </article>
         </main>
     )
