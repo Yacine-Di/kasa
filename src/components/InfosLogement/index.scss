@@ -6,12 +6,6 @@
     border-radius: 10px;
     height: fit-content;
     margin-bottom: 30px;
-    width: $medium;
-
-    @media (max-width: 768px) {
-        width: $small;
-    }
-    
 
     &-title{
         background-color: $red;
@@ -41,7 +35,7 @@
     }
 
     &-more-content{
-        margin-top: -220px;
+        margin-top: -300px;
         margin-bottom: 0px;
         padding: 10px;
         font-size: 18px;

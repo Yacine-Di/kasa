@@ -23,6 +23,15 @@
         align-items: center;
     }
 
+    &__infos--resize{
+        width: $large;
+
+        @media (max-width: 768px) {
+            width: $small;
+        }
+
+    }
+
     .background{
         width: 100%;
         max-width: 1240px;

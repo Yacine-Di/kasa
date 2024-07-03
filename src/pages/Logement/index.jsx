@@ -48,8 +48,12 @@ function Logement() {
                 </article>
             </article>
             <article className="description__equipements">
-                <InfosLogement title="Description" text={description} />
-                <InfosLogement title="equipements" text={equipments} />
+                <div className="description__equipements--resize">
+                    <InfosLogement title="Description" text={description} />
+                </div>
+                <div className="description__equipements--resize">
+                    <InfosLogement title="equipements" text={equipments} />
+                </div>
             </article>
         </main>
     ) : (

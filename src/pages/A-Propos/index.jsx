@@ -1,4 +1,4 @@
-import InfosAbout from '../../components/InfosAbout'
+import InfosLogement from '../../components/InfosLogement'
 import './index.scss'
 import { about } from '../../datas/apropos'
 
@@ -7,22 +7,30 @@ function APropos() {
         <main className="a-propos">
             <section className="background"></section>
             <article className="a-propos__infos">
-                <InfosAbout
-                    title={about.fiabilite.name}
-                    text={about.fiabilite.text}
-                />
-                <InfosAbout
-                    title={about.respect.name}
-                    text={about.respect.text}
-                />
-                <InfosAbout
-                    title={about.service.name}
-                    text={about.service.text}
-                />
-                <InfosAbout
-                    title={about.securite.name}
-                    text={about.securite.text}
-                />
+                <div className="a-propos__infos--resize">
+                    <InfosLogement
+                        title={about.fiabilite.name}
+                        text={about.fiabilite.text}
+                    />
+                </div>
+                <div className="a-propos__infos--resize">
+                    <InfosLogement
+                        title={about.respect.name}
+                        text={about.respect.text}
+                    />
+                </div>
+                <div className="a-propos__infos--resize">
+                    <InfosLogement
+                        title={about.service.name}
+                        text={about.service.text}
+                    />
+                </div>
+                <div className="a-propos__infos--resize">
+                    <InfosLogement
+                        title={about.securite.name}
+                        text={about.securite.text}
+                    />
+                </div>
             </article>
         </main>
     )
