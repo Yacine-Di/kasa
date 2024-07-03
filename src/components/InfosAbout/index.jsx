@@ -4,20 +4,20 @@ import './index.scss'
 
 function InfosAbout({ title, text }) {
     const [isTextInfoOpen, setDescription] = useState(false)
-    let infosClasses = 'infos infos__background--lightgrey'
-    let rotateArrow = 'infos__arrow '
-    let moreInfoClasses = 'infos-more-container '
-    let contentClasses = 'infos-more-content '
+    let infosClasses = 'about about__background--lightgrey'
+    let rotateArrow = 'about__arrow '
+    let moreInfoClasses = 'about-more-container '
+    let contentClasses = 'about-more-content '
 
     if (isTextInfoOpen) {
-        rotateArrow += 'infos__arrow--rotate__bot'
-        contentClasses += 'infos-more--show'
+        rotateArrow += 'about__arrow--rotate__bot'
+        contentClasses += 'about-more--show'
     }
 
     return (
         <article className={infosClasses}>
             <p
-                className="infos-title"
+                className="about-title"
                 onClick={() => setDescription(!isTextInfoOpen)}
             >
                 {title}

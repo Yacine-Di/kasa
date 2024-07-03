@@ -4,9 +4,11 @@ import './index.scss'
 import Slides from '../../components/Slides'
 import StarRate from '../../components/StarRate'
 import InfosLogement from '../../components/InfosLogement'
+import Erreur from '../Erreur'
 
 function Logement() {
     const { id } = useParams()
+    const logement = logements.find((logement) => logement.id === id)
     const {
         title,
         pictures,
@@ -16,9 +18,9 @@ function Logement() {
         location,
         equipments,
         tags,
-    } = logements.find((logement) => logement.id === id)
+    } = logement || {}
 
-    return (
+    return logement ? (
         <main className="logement">
             <Slides pictures={pictures} />
             <article className="presentation">
@@ -50,6 +52,8 @@ function Logement() {
                 <InfosLogement title="equipements" text={equipments} />
             </article>
         </main>
+    ) : (
+        <Erreur />
     )
 }
 
