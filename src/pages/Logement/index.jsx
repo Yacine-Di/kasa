@@ -3,7 +3,7 @@ import logements from '../../datas/logements.json'
 import './index.scss'
 import Slides from '../../components/Slides'
 import StarRate from '../../components/StarRate'
-import InfosLogement from '../../components/InfosLogement'
+import Infos from '../../components/Infos'
 import Erreur from '../Erreur'
 
 function Logement() {
@@ -49,10 +49,10 @@ function Logement() {
             </article>
             <article className="description__equipements">
                 <div className="description__equipements--resize">
-                    <InfosLogement title="Description" text={description} />
+                    <Infos title="Description" text={description} />
                 </div>
                 <div className="description__equipements--resize">
-                    <InfosLogement title="equipements" text={equipments} />
+                    <Infos title="equipements" text={equipments} />
                 </div>
             </article>
         </main>

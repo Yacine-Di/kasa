@@ -2,7 +2,7 @@ import { useState } from 'react'
 import topArrow from '../../assets/arrow-top.png'
 import './index.scss'
 
-function InfosLogement({ title, text }) {
+function Infos({ title, text }) {
     const [isTextInfoOpen, setDescription] = useState(false)
     const [isEquipementOpen, setEquipement] = useState(false)
     let infosClasses = 'infos infos__background--lightgrey'
@@ -58,4 +58,4 @@ function InfosLogement({ title, text }) {
     )
 }
 
-export default InfosLogement
+export default Infos
