@@ -5,8 +5,17 @@ import './index.scss'
 
 function Slides({ pictures }) {
     let [actualPicture, setActualPicture] = useState(0)
+    console.log(pictures.length)
 
-    return (
+    return pictures.length === 1 ? (
+        <article className="slides">
+            <img
+                className="slides__picture"
+                src={pictures[actualPicture]}
+                alt={`logement ${pictures[actualPicture]} / ${pictures.length}`}
+            />
+        </article>
+    ) : (
         <article className="slides">
             <img
                 onClick={() =>
