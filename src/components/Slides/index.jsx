@@ -5,7 +5,6 @@ import './index.scss'
 
 function Slides({ pictures }) {
     let [actualPicture, setActualPicture] = useState(0)
-    console.log(pictures.length)
 
     return pictures.length === 1 ? (
         <article className="slides">
