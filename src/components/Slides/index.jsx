@@ -47,6 +47,9 @@ function Slides({ pictures }) {
                 src={arrowNext}
                 alt="next media"
             />
+            <p className="slides__count">
+                {actualPicture + 1}/{pictures.length}
+            </p>
         </article>
     )
 }
