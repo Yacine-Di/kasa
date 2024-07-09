@@ -45,8 +45,10 @@
         color: white;
         font-size: 18px;
         font-family: $mainPolice;
+        left: 0; 
+        right: 0; 
         top: 85%;
-        left: 50%;
+        text-align: center;
 
         @media (max-width: 768px) {
             display: none;
