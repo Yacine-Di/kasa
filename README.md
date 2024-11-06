@@ -15,6 +15,8 @@ Developed with React, SCSS, and Figma mockups, this project highlights various a
 
 ## Installation
 
+Clone the project
+
 ```bash
   git clone https://github.com/Yacine-Di/kasa.git
 ```
@@ -34,13 +36,13 @@ During this project I learned how to create react components. How to use React R
 ## Screenshots
 
 Home page <br>
-<img src="assets/screenshots/kasa1.png" width="600" />
+<img src="src/assets/screenshots/kasa1.png" width="600" />
 
 Accommodation page <br>
-<img src="assets/screenshots/kasa2.png" width="600" />
+<img src="src/assets/screenshots/kasa2.png" width="600" />
 
 About page <br>
-<img src="assets/screenshots/kasa3.png" width="600" />
+<img src="src/assets/screenshots/kasa3.png" width="600" />
 
 ## Authors
 
